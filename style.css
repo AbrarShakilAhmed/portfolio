@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    margin-top: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.brand-logo {
+    font-size: 3rem;
+    color: #13b4ff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    font-size: 1.8rem;
+    color: #000;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #13b4ff;
+}
+
+.profile-image {
+    box-shadow: 0 0 25px solid #13b4ff;
+}
+.skills-list,
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-title {
+    font-size: 3rem;
+    margin: 3rem 0 1rem;
+    text-align: center;
+    color: #13b4ff;
+}
+
+.education-section{
+    text-align: center;  
+    font-size: 1.5rem;  
+
+}
+
+.skill,
+.experience-item {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #13b4ff;
+    color: #fff;
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #469ff1;
+}
+.skills-section,.education-section,.experience-section,.contact-section{
+    min-height: 20vh;
+    padding: 50px;
+}
+
+
+@media(max-width: 995px) {
+    .nav-links {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #13b4ff;
+        border-bottom: 3px solid #13b4ff;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #fff;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #13b4ff;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9%;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #fff;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.hero-section .intro h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.highlight {
+    color: #469ff1;
+}
+
+.intro h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.intro p {
+    font-size: 1.6rem;
+}
+
+.profile-image {
+    border-radius: 50%;
+}
+
+.profile-image img {
+    width: 22vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #13b4ff;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.profile-image img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #13b4ff;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #469ff1;
+}
+
+.social-icons a:hover {
+    color: #000;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #469ff1;
+    box-shadow: 0 0 25px #13b4ff;
+}
+
+.hire-button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #13b4ff;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #469ff1;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.hire-button:hover {
+    transform: scale(1.03);
+    background-color: #469ff1;
+    color: #fff;
+    box-shadow: 0 0 25px #52b1f0;
+}
+
+.typing-effect {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-effect span {
+    position: relative;
+    transition: 0.3s;
+}
+
+.typing-effect span::before {
+    content: "software Developer";
+    color: #469ff1;
+    animation: typing 20s infinite;
+}
+
+
+@keyframes typing {
+    0%, 20% {
+        content: "Web Developer";
+    }
+    21%, 40% {
+        content: "Mern Developer";
+    }
+    41%, 60% {
+        content: "Web Designer";
+    }
+    61%, 80% {
+        content: "UI/UX Designer";
+    }
+    81%, 100% {
+        content: "Frontend Devoloper";
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero-section {
+        gap: 4rem;
+    }
+}
+
+@media(max-width: 995px) {
+    .hero-section {
+        flex-direction: column;
+        margin: 5rem 4rem;
+        align-items: center;
+    }
+
+    .hero-section .intro h3 {
+        font-size: 2.5rem;
+    }
+
+    .intro h1 {
+        font-size: 5rem;
+    }
+
+    .profile-image img {
+        width: 30vw;
+        margin-top: 4rem;
+    }
+}
