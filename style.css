@@ -41,6 +41,9 @@ header {
     cursor: pointer;
     transition: 0.5s ease;
 }
+.profile-image img{
+    box-shadow: 2px 2px 50px #469ff1;
+}
 
 .brand-logo:hover {
     transform: scale(1.1);
