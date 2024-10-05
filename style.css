@@ -41,8 +41,12 @@ header {
     cursor: pointer;
     transition: 0.5s ease;
 }
-.profile-image img{
+
+.profile-image img {
     box-shadow: 2px 2px 50px #469ff1;
+    width: 22vw;
+    border-radius: 50%;
+    transition: 0.2s linear;
 }
 
 .brand-logo:hover {
@@ -63,15 +67,14 @@ header {
     color: #13b4ff;
 }
 
-.profile-image {
-    box-shadow: 0 0 25px solid #13b4ff;
-}
 .skills-list,
-.experience-list {
+.experience-list,
+.projects-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .section-title {
     font-size: 3rem;
     margin: 3rem 0 1rem;
@@ -79,10 +82,36 @@ header {
     color: #13b4ff;
 }
 
-.education-section{
-    text-align: center;  
-    font-size: 1.5rem;  
+.project-item {
+    opacity: 0; /* Initial state for opacity */
+    animation: fadeIn 0.5s forwards, bounce 0.5s forwards;
+    margin: 1rem;
+    width: 220px; /* Updated width */
+    text-align: center;
+    transition: transform 0.3s;
+}
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.education-section {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .skill,
@@ -124,17 +153,22 @@ header {
 .contact-form button:hover {
     background-color: #469ff1;
 }
-.skills-section,.education-section,.experience-section,.contact-section{
+
+.skills-section,
+.education-section,
+.experience-section,
+.contact-section,
+.projects-section {
     min-height: 20vh;
     padding: 50px;
 }
-footer{
+
+footer {
     text-align: center;
     font-size: 1.2rem;
 }
 
-
-@media(max-width: 995px) {
+@media (max-width: 995px) {
     .nav-links {
         position: absolute;
         display: none;
@@ -144,8 +178,7 @@ footer{
         border-left: 3px solid #13b4ff;
         border-bottom: 3px solid #13b4ff;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        padding: 1rem;
     }
 
     .nav-links.active {
@@ -198,23 +231,6 @@ section {
 
 .intro p {
     font-size: 1.6rem;
-}
-
-.profile-image {
-    border-radius: 50%;
-}
-
-.profile-image img {
-    width: 22vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #13b4ff;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.profile-image img:hover {
-    font-size: 1.8rem;
-    font-weight: 500;
 }
 
 .social-icons a {
@@ -271,38 +287,13 @@ section {
     transition: 0.3s;
 }
 
-.typing-effect span::before {
-    content: "software Developer";
-    color: #469ff1;
-    animation: typing 20s infinite;
-}
-
-
-@keyframes typing {
-    0%, 20% {
-        content: "Web Developer";
-    }
-    21%, 40% {
-        content: "Mern Developer";
-    }
-    41%, 60% {
-        content: "Web Designer";
-    }
-    61%, 80% {
-        content: "UI/UX Designer";
-    }
-    81%, 100% {
-        content: "Frontend Devoloper";
-    }
-}
-
 @media (max-width: 1000px) {
     .hero-section {
         gap: 4rem;
     }
 }
 
-@media(max-width: 995px) {
+@media (max-width: 995px) {
     .hero-section {
         flex-direction: column;
         margin: 5rem 4rem;
@@ -322,6 +313,7 @@ section {
         margin-top: 4rem;
     }
 }
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black;
